@@ -21,7 +21,7 @@ phases:
       # - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION
       # - printf '[{"name":"nginx","imageUri":"'$AWS_ACCOUNT_ID'.dkr.ecr.'$AWS_DEFAULT_REGION'.amazonaws.com/'$IMAGE_REPO_NAME':'$CODEBUILD_RESOLVED_SOURCE_VERSION'"}]' > imagedefinitions.json
       # - printf '[{"name":"nginx"}]' > imagedefinitions.json
-      - printf '[{"name":"hello-world","imageUri":"nginxtest"}]' codepipeline:nginx > imagedefinitions.json
+      - printf '[{"name":"nginx","imageUri":"nginxtest"}]' codepipeline:nginx > imagedefinitions.json
 
 artifacts:
     files: imagedefinitions.json
